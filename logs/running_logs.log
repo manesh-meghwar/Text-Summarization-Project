@@ -1,0 +1,44 @@
+[2026-11-05 13:22:44,799: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 13:22:44,803: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 13:22:44,808: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 13:22:44,809: INFO: common: created directory at: artifacts]
+[2026-11-05 13:22:44,809: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 13:24:57,197: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 35DE:20DAF4:292FB5:361156:6AEC12E6
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 05:24:57 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710134-PHX
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1793856167.883940,VS0,VE130485
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d889d0e6131cde0b016440b1279c9d397125fa44
+Expires: Thu, 05 Nov 2026 05:29:57 GMT
+Source-Age: 66
+
+]
+[2026-11-05 13:24:57,469: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 13:24:57,470: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 13:24:57,473: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 13:24:57,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 13:24:57,475: INFO: common: created directory at: artifacts]
+[2026-11-05 13:24:57,476: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 13:24:57,477: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
