@@ -42,3 +42,615 @@ x==========x]
 [2026-11-05 13:24:57,477: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
 
 x==========x]
+[2026-11-05 14:01:28,766: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:01:28,769: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:01:28,771: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:01:28,772: INFO: common: created directory at: artifacts]
+[2026-11-05 14:01:28,772: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:01:31,444: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:01:30 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710105-PHX
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1793858491.775064,VS0,VE192
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: ff804f847ee2fe72220043190dbdee5e4217613e
+Expires: Thu, 05 Nov 2026 06:06:30 GMT
+Source-Age: 0
+
+]
+[2026-11-05 14:01:31,620: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:01:31,621: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:01:31,624: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:01:31,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:01:31,627: INFO: common: created directory at: artifacts]
+[2026-11-05 14:01:31,628: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:01:31,629: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:01:31,630: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:01:31,633: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:01:31,635: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:01:31,636: INFO: common: created directory at: artifacts]
+[2026-11-05 14:01:31,636: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:01:31,637: ERROR: main: DataTransformationConfig() takes no arguments]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 38, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 12, in main
+    data_transformation_config = config.get_data_transformation_config()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\config\configuration.py", line 62, in get_data_transformation_config
+    data_transformation_config = DataTransformationConfig(
+        root_dir=config.root_dir,
+        data_path=config.data_path,
+        tokenizer_name = config.tokenizer_name
+    )
+TypeError: DataTransformationConfig() takes no arguments
+[2026-11-05 14:17:01,235: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:17:01,277: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:17:01,283: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:17:01,294: INFO: common: created directory at: artifacts]
+[2026-11-05 14:17:01,295: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:17:04,301: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:17:03 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710074-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793859423.314690,VS0,VE94
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 6352d85242852a4e8539a3cd94840a177c4ba948
+Expires: Thu, 05 Nov 2026 06:22:03 GMT
+Source-Age: 0
+
+]
+[2026-11-05 14:17:04,488: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:17:04,488: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:17:04,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:17:04,495: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:17:04,496: INFO: common: created directory at: artifacts]
+[2026-11-05 14:17:04,497: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:17:04,499: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:17:04,499: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:17:04,506: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:17:04,509: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:17:04,510: INFO: common: created directory at: artifacts]
+[2026-11-05 14:17:04,510: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:17:04,511: ERROR: main: DataTransformationConfig() takes no arguments]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 38, in <module>
+    data_transformation.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 12, in main
+    data_transformation_config = config.get_data_transformation_config()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\config\configuration.py", line 62, in get_data_transformation_config
+    data_transformation_config = DataTransformationConfig(
+TypeError: DataTransformationConfig() takes no arguments
+[2026-11-05 14:19:47,616: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:19:47,621: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:19:47,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:19:47,625: INFO: common: created directory at: artifacts]
+[2026-11-05 14:19:47,626: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:19:49,970: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:19:49 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710073-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793859590.607035,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 333af9e91c3a65d8800a4bd5ee3f8086ca07badd
+Expires: Thu, 05 Nov 2026 06:24:49 GMT
+Source-Age: 166
+
+]
+[2026-11-05 14:19:50,124: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:19:50,125: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:19:50,128: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:19:50,131: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:19:50,131: INFO: common: created directory at: artifacts]
+[2026-11-05 14:19:50,132: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:19:50,134: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:19:50,136: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:19:50,141: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:19:50,143: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:19:50,143: INFO: common: created directory at: artifacts]
+[2026-11-05 14:19:50,144: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:19:50,161: ERROR: main: [Errno 2] No such file or directory]
+Traceback (most recent call last):
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 801, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\models\auto\configuration_auto.py", line 397, in from_pretrained
+    config_dict, unused_kwargs = PreTrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\configuration_utils.py", line 919, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\configuration_utils.py", line 971, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 634, in cached_files
+    raise e
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 537, in cached_files
+    hf_hub_download(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 276, in _inner
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1763, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1670, in get_hf_file_metadata
+    response = _httpx2_follow_hub_redirects_with_backoff(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 764, in _httpx2_follow_hub_redirects_with_backoff
+    response = http_backoff(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 637, in http_backoff
+    return next(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 504, in _http_backoff_base
+    client = get_session()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 417, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 345, in default_client_factory
+    return httpx2.Client(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_client.py", line 662, in __init__
+    self._transport = self._init_transport(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_client.py", line 703, in _init_transport
+    return HTTPTransport(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_transports\default.py", line 149, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_config.py", line 36, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 766, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 38, in <module>
+    data_transformation.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_transformation.py", line 12, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 805, in from_pretrained
+    config = PreTrainedConfig.from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\configuration_utils.py", line 869, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\configuration_utils.py", line 919, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\configuration_utils.py", line 971, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 634, in cached_files
+    raise e
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\utils\hub.py", line 537, in cached_files
+    hf_hub_download(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 276, in _inner
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1763, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\file_download.py", line 1670, in get_hf_file_metadata
+    response = _httpx2_follow_hub_redirects_with_backoff(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 764, in _httpx2_follow_hub_redirects_with_backoff
+    response = http_backoff(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 637, in http_backoff
+    return next(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 504, in _http_backoff_base
+    client = get_session()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 417, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\huggingface_hub\utils\_http.py", line 345, in default_client_factory
+    return httpx2.Client(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_client.py", line 662, in __init__
+    self._transport = self._init_transport(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_client.py", line 703, in _init_transport
+    return HTTPTransport(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_transports\default.py", line 149, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\httpx2\_config.py", line 36, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 766, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+FileNotFoundError: [Errno 2] No such file or directory
+[2026-11-05 14:21:48,664: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:21:48,669: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:21:48,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:21:48,672: INFO: common: created directory at: artifacts]
+[2026-11-05 14:21:48,672: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:21:49,036: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)>]
+Traceback (most recent call last):
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1361, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1331, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1377, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1326, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1086, in _send_output
+    self.send(msg)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1024, in send
+    self.connect()
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1503, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 1117, in _create
+    self.do_handshake()
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 1388, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1404, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1364, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)>
+[2026-11-05 14:22:19,516: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:22:19,521: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:22:19,523: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:22:19,524: INFO: common: created directory at: artifacts]
+[2026-11-05 14:22:19,525: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:22:21,919: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:22:21 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710065-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793859742.516168,VS0,VE107
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 764592df4aaf390ee5a2e61b974fdb52a42464e4
+Expires: Thu, 05 Nov 2026 06:27:21 GMT
+Source-Age: 0
+
+]
+[2026-11-05 14:22:22,076: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:22:22,077: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:22:22,082: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:22:22,084: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:22:22,084: INFO: common: created directory at: artifacts]
+[2026-11-05 14:22:22,085: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:22:22,086: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:22:22,087: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:22:22,090: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:22:22,092: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:22:22,093: INFO: common: created directory at: artifacts]
+[2026-11-05 14:22:22,093: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:22:22,619: INFO: _client: HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:22,899: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:23,244: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/config.json "HTTP/1.1 307 Temporary Redirect"]
+[2026-11-05 14:22:23,247: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 14:22:23,463: INFO: _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fconfig.json=&etag=%222c1a911e577525af99c26c1634c473667e1e7ae2%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:23,683: INFO: _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fconfig.json=&etag=%222c1a911e577525af99c26c1634c473667e1e7ae2%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:24,012: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"]
+[2026-11-05 14:22:24,570: INFO: _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/tokenizer_config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Ftokenizer_config.json=&etag=%220a6130bfb0bfa44a3a376fe225b327e7ba8fa889%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:24,787: INFO: _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/tokenizer_config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Ftokenizer_config.json=&etag=%220a6130bfb0bfa44a3a376fe225b327e7ba8fa889%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:25,105: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:22:25,418: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:25,698: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/spiece.model "HTTP/1.1 307 Temporary Redirect"]
+[2026-11-05 14:22:25,913: INFO: _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/spiece.model?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fspiece.model=&etag=%225dba785a4a5acd022e91efdf53a9966f91d6e7d8%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:26,132: INFO: _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/spiece.model?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fspiece.model=&etag=%225dba785a4a5acd022e91efdf53a9966f91d6e7d8%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:26,507: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/tokenizer.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:22:26,783: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/added_tokens.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:22:27,074: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"]
+[2026-11-05 14:22:27,292: INFO: _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/special_tokens_map.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fspecial_tokens_map.json=&etag=%226dc4d430ddbd24171268d73da061ce9f0b092911%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:27,517: INFO: _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/special_tokens_map.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fspecial_tokens_map.json=&etag=%226dc4d430ddbd24171268d73da061ce9f0b092911%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:22:27,803: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/chat_template.jinja "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:22:29,737: ERROR: main: PegasusTokenizer has no attribute as_target_tokenizer]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 38, in <module>
+    data_transformation.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 14, in main
+    data_transformation.convert()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_transformation.py", line 31, in convert
+    dataset_samsum_pt = dataset_samsum.map(self.convert_examples_to_features, batched = True)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\dataset_dict.py", line 959, in map
+    dataset_dict[split] = dataset.map(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 567, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3624, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3989, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3942, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3863, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_transformation.py", line 19, in convert_examples_to_features
+    with self.tokenizer.as_target_tokenizer():
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\tokenization_utils_base.py", line 1317, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: PegasusTokenizer has no attribute as_target_tokenizer
+[2026-11-05 14:23:01,369: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:23:01,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:23:01,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:23:01,375: INFO: common: created directory at: artifacts]
+[2026-11-05 14:23:01,376: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:23:01,727: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)>]
+Traceback (most recent call last):
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1361, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1331, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1377, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1326, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1086, in _send_output
+    self.send(msg)
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1024, in send
+    self.connect()
+  File "C:\dlcv\envs\textS_310\lib\http\client.py", line 1503, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 1117, in _create
+    self.do_handshake()
+  File "C:\dlcv\envs\textS_310\lib\ssl.py", line 1388, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1404, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 1364, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get issuer certificate (_ssl.c:1019)>
+[2026-11-05 14:25:16,518: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:25:16,524: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:25:16,527: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:25:16,527: INFO: common: created directory at: artifacts]
+[2026-11-05 14:25:16,527: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:25:18,846: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:25:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710090-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793859919.682223,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 4eccd03d5d65b0b71e90b44beace8276df4e7106
+Expires: Thu, 05 Nov 2026 06:30:18 GMT
+Source-Age: 177
+
+]
+[2026-11-05 14:25:19,031: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:25:19,032: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:25:19,036: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:25:19,038: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:25:19,040: INFO: common: created directory at: artifacts]
+[2026-11-05 14:25:19,040: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:25:19,042: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:25:19,042: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:25:19,046: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:25:19,048: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:25:19,048: INFO: common: created directory at: artifacts]
+[2026-11-05 14:25:19,049: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:25:19,786: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:25:20,108: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:25:20,637: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 14:25:22,371: ERROR: main: PegasusTokenizer has no attribute as_target_tokenizer]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 41, in <module>
+    data_transformation.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 14, in main
+    data_transformation.convert()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_transformation.py", line 31, in convert
+    dataset_samsum_pt = dataset_samsum.map(self.convert_examples_to_features, batched = True)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\dataset_dict.py", line 959, in map
+    dataset_dict[split] = dataset.map(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 567, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3624, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3989, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3942, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\datasets\arrow_dataset.py", line 3863, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_transformation.py", line 19, in convert_examples_to_features
+    with self.tokenizer.as_target_tokenizer():
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\tokenization_utils_base.py", line 1317, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: PegasusTokenizer has no attribute as_target_tokenizer
+[2026-11-05 14:29:03,383: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 14:29:03,389: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:29:03,391: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:29:03,391: INFO: common: created directory at: artifacts]
+[2026-11-05 14:29:03,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 14:29:05,831: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9562:1A1A3E:29C956:378470:6AEC1BB9
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 06:29:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710110-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793860145.463206,VS0,VE103
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d3e189ae46ea37689bde7408f19ed729960f60b8
+Expires: Thu, 05 Nov 2026 06:34:05 GMT
+Source-Age: 0
+
+]
+[2026-11-05 14:29:06,007: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:29:06,009: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 14:29:06,014: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:29:06,016: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:29:06,016: INFO: common: created directory at: artifacts]
+[2026-11-05 14:29:06,017: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 14:29:06,018: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 14:29:06,018: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 14:29:06,022: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:29:06,025: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:29:06,025: INFO: common: created directory at: artifacts]
+[2026-11-05 14:29:06,026: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 14:29:06,542: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:29:06,850: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:29:07,164: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 14:29:15,266: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
