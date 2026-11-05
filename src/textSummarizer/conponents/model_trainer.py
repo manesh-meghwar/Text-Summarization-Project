@@ -41,7 +41,7 @@ class ModelTrainer:
             gradient_accumulation_steps=16,
             dataloader_pin_memory=False,   # <-- ADDED THIS
             dataloader_num_workers=0,        # <-- ADDED THIS
-            max_steps=5  # <--- ADD THIS! It forces training to stop after 5 steps.
+            # max_steps=5  # <--- ADD THIS! It forces training to stop after 5 steps.
         ) 
 
         trainer = Trainer(model=model_pegasus, args=trainer_args,
