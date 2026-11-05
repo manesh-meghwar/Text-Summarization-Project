@@ -654,3 +654,506 @@ x==========x]
 [2026-11-05 14:29:15,266: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2026-11-05 14:45:09,228: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:45:09,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:45:09,261: INFO: common: created directory at: artifacts]
+[2026-11-05 14:45:09,262: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 14:45:09,848: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:45:10,161: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:45:10,454: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 14:45:11,086: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:45:11,601: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:45:11,604: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 14:45:11,894: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:45:12,176: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/pytorch_model.bin "HTTP/1.1 302 Found"]
+[2026-11-05 14:45:12,548: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/xet-read-token/40d588fdab0cc077b80d950b300bf66ad3c75b92 "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:24,765: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:53:25,416: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:25,782: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:26,097: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:26,420: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:26,837: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:53:27,225: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 14:53:27,846: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/xet-read-token/7db4e727842ad86cc5cdfeaef4d14c6fb2b46511 "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:39,339: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/40d588fdab0cc077b80d950b300bf66ad3c75b92/generation_config.json "HTTP/1.1 307 Temporary Redirect"]
+[2026-11-05 14:53:39,553: INFO: _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/generation_config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fgeneration_config.json=&etag=%22d5bfe5384dec23c9fd2b989bdb0cbe6e86efe0b5%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:53:39,780: INFO: _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/google/pegasus-cnn_dailymail/40d588fdab0cc077b80d950b300bf66ad3c75b92/generation_config.json?%2Fgoogle%2Fpegasus-cnn_dailymail%2Fresolve%2F40d588fdab0cc077b80d950b300bf66ad3c75b92%2Fgeneration_config.json=&etag=%22d5bfe5384dec23c9fd2b989bdb0cbe6e86efe0b5%22 "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:41,154: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 14:59:41,170: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 14:59:41,172: INFO: common: created directory at: artifacts]
+[2026-11-05 14:59:41,173: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 14:59:42,031: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:42,321: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:59:42,815: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:43,465: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:43,993: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:59:44,285: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:45,535: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:47,440: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:48,126: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 14:59:48,482: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 14:59:49,099: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:06:11,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:06:11,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:06:11,108: INFO: common: created directory at: artifacts]
+[2026-11-05 15:06:11,110: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:06:11,651: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:11,951: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:06:12,240: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:13,056: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:13,587: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:06:13,923: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:19,036: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:19,348: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:20,855: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:06:22,424: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:06:23,272: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:15:31,772: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:15:31,782: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:15:31,785: INFO: common: created directory at: artifacts]
+[2026-11-05 15:15:31,787: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:15:32,378: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:32,670: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:15:32,949: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:33,576: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:33,869: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:15:34,192: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:35,799: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:36,231: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:36,797: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:15:37,985: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:15:38,408: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:21:55,293: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:21:55,298: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:21:55,300: INFO: common: created directory at: artifacts]
+[2026-11-05 15:21:55,301: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:21:55,836: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:21:56,136: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:21:56,435: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:21:57,018: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:21:57,322: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:21:57,629: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:21:59,227: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:21:59,677: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:22:00,222: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:22:00,645: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:22:01,385: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:27:30,731: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 15:27:30,743: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:27:30,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:27:30,747: INFO: common: created directory at: artifacts]
+[2026-11-05 15:27:30,747: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 15:27:34,029: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 41A2:88A48:298A61:40FCA0:6AEC2FE3
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 07:27:33 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710057-PHX
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1793863653.919243,VS0,VE429
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 6c6e8a0afe1554ebfbc307cf763d75d5a99b5a61
+Expires: Thu, 05 Nov 2026 07:32:33 GMT
+Source-Age: 0
+
+]
+[2026-11-05 15:27:34,199: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:27:34,200: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 15:27:34,206: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:27:34,209: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:27:34,210: INFO: common: created directory at: artifacts]
+[2026-11-05 15:27:34,210: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 15:27:34,211: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:27:34,212: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 15:27:34,216: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:27:34,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:27:34,219: INFO: common: created directory at: artifacts]
+[2026-11-05 15:27:34,220: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 15:27:34,725: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:35,029: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:27:35,310: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:45,814: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:27:45,815: INFO: main: *******************]
+[2026-11-05 15:27:45,815: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-05 15:27:45,819: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:27:45,823: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:27:45,824: INFO: common: created directory at: artifacts]
+[2026-11-05 15:27:45,824: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:27:46,552: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:46,852: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:27:47,143: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:47,735: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:48,073: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:27:48,074: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 15:27:48,368: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:49,770: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:50,233: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:50,675: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:27:51,125: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:27:51,869: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:28:12,823: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 54, in <module>
+    model_trainer.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\model_trainer.py", line 36, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2026-11-05 15:35:53,845: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 15:35:53,857: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:35:53,861: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:35:53,861: INFO: common: created directory at: artifacts]
+[2026-11-05 15:35:53,867: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 15:35:56,410: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 41A2:88A48:298A61:40FCA0:6AEC2FE3
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 07:35:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710085-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793864156.022584,VS0,VE93
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: f58d9a0e7e6269e7205f8fdec962b62cbf8fa80c
+Expires: Thu, 05 Nov 2026 07:40:56 GMT
+Source-Age: 0
+
+]
+[2026-11-05 15:35:56,561: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:35:56,561: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 15:35:56,567: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:35:56,569: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:35:56,569: INFO: common: created directory at: artifacts]
+[2026-11-05 15:35:56,570: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 15:35:56,571: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:35:56,572: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 15:35:56,575: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:35:56,577: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:35:56,578: INFO: common: created directory at: artifacts]
+[2026-11-05 15:35:56,578: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 15:35:57,070: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:35:57,367: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:35:57,639: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:07,984: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:36:07,985: INFO: main: *******************]
+[2026-11-05 15:36:07,985: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-05 15:36:07,989: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:36:07,991: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:36:07,992: INFO: common: created directory at: artifacts]
+[2026-11-05 15:36:07,992: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:36:08,478: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:08,757: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:36:09,043: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:09,608: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:09,955: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:36:09,956: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 15:36:10,269: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:11,763: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:12,119: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:12,482: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:36:12,897: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:36:13,407: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:36:26,593: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=1.1.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=1.1.0'`]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 54, in <module>
+    model_trainer.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\model_trainer.py", line 36, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 115, in __init__
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\training_args.py", line 1625, in __post_init__
+    self.device
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\training_args.py", line 1924, in device
+    return self._setup_devices
+  File "C:\dlcv\envs\textS_310\lib\functools.py", line 981, in __get__
+    val = self.func(instance)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\training_args.py", line 1812, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=1.1.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=1.1.0'`
+[2026-11-05 15:41:42,571: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 15:41:42,576: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:41:42,578: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:41:42,579: INFO: common: created directory at: artifacts]
+[2026-11-05 15:41:42,591: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 15:41:45,175: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 41A2:88A48:298A61:40FCA0:6AEC2FE3
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 07:41:44 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710038-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793864505.669639,VS0,VE92
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7630a5aa2cd1802df5c0567421677d8012a42295
+Expires: Thu, 05 Nov 2026 07:46:44 GMT
+Source-Age: 0
+
+]
+[2026-11-05 15:41:45,456: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:41:45,457: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 15:41:45,461: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:41:45,466: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:41:45,467: INFO: common: created directory at: artifacts]
+[2026-11-05 15:41:45,468: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 15:41:45,469: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:41:45,470: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 15:41:45,476: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:41:45,483: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:41:45,484: INFO: common: created directory at: artifacts]
+[2026-11-05 15:41:45,485: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 15:41:46,023: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:46,320: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:41:46,609: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:54,634: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:41:54,635: INFO: main: *******************]
+[2026-11-05 15:41:54,635: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-05 15:41:54,639: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:41:54,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:41:54,641: INFO: common: created directory at: artifacts]
+[2026-11-05 15:41:54,642: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:41:55,143: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:55,428: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:41:55,711: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:56,307: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:56,652: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:41:56,652: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 15:41:56,973: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:58,547: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:59,011: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:59,517: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:41:59,863: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:42:00,215: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:49:42,420: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 15:49:42,433: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:49:42,438: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:49:42,440: INFO: common: created directory at: artifacts]
+[2026-11-05 15:49:42,449: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 15:49:46,060: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 41A2:88A48:298A61:40FCA0:6AEC2FE3
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 07:49:45 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710044-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793864985.338378,VS0,VE94
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0c8beacbc341fc6c996128a824e283c252998586
+Expires: Thu, 05 Nov 2026 07:54:45 GMT
+Source-Age: 0
+
+]
+[2026-11-05 15:49:46,241: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:49:46,241: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 15:49:46,245: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:49:46,248: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:49:46,248: INFO: common: created directory at: artifacts]
+[2026-11-05 15:49:46,249: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 15:49:46,251: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:49:46,251: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 15:49:46,256: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:49:46,258: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:49:46,259: INFO: common: created directory at: artifacts]
+[2026-11-05 15:49:46,260: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 15:49:46,808: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:47,129: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:49:47,436: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:55,141: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:49:55,142: INFO: main: *******************]
+[2026-11-05 15:49:55,142: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-05 15:49:55,146: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:49:55,148: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:49:55,148: INFO: common: created directory at: artifacts]
+[2026-11-05 15:49:55,149: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:49:55,667: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:55,974: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:49:56,973: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:57,551: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:57,896: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:49:57,899: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 15:49:58,244: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:49:59,838: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:50:00,330: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:50:00,788: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:50:01,119: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:50:01,565: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:57:15,271: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-05 15:57:15,284: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:57:15,289: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:57:15,291: INFO: common: created directory at: artifacts]
+[2026-11-05 15:57:15,292: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-05 15:57:18,474: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 41A2:88A48:298A61:40FCA0:6AEC2FE3
+x-github-edge-region: iad
+Accept-Ranges: bytes
+Date: Thu, 05 Nov 2026 07:57:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-phx1710052-PHX
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1793865438.956203,VS0,VE99
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 159b051311a46ea82c328406d4cf79c19f6bc826
+Expires: Thu, 05 Nov 2026 08:02:18 GMT
+Source-Age: 0
+
+]
+[2026-11-05 15:57:18,660: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:57:18,661: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-05 15:57:18,665: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:57:18,668: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:57:18,668: INFO: common: created directory at: artifacts]
+[2026-11-05 15:57:18,669: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-05 15:57:18,670: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:57:18,671: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-05 15:57:18,674: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:57:18,676: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:57:18,677: INFO: common: created directory at: artifacts]
+[2026-11-05 15:57:18,678: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-05 15:57:19,202: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:19,518: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:57:19,814: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:29,634: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-05 15:57:29,637: INFO: main: *******************]
+[2026-11-05 15:57:29,637: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-05 15:57:29,641: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-05 15:57:29,644: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-05 15:57:29,644: INFO: common: created directory at: artifacts]
+[2026-11-05 15:57:29,645: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-05 15:57:30,137: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:30,437: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:57:30,726: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:31,321: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:31,661: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:57:31,969: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:33,314: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/main "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:33,694: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/discussions?p=0 "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:34,097: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/commits/refs%2Fpr%2F12 "HTTP/1.1 200 OK"]
+[2026-11-05 15:57:34,532: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors.index.json "HTTP/1.1 404 Not Found"]
+[2026-11-05 15:57:34,595: WARNING: _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.]
+[2026-11-05 15:57:34,988: INFO: _client: HTTP Request: HEAD https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors "HTTP/1.1 302 Found"]
+[2026-11-05 15:59:13,808: ERROR: main: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 54, in <module>
+    model_trainer.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\model_trainer.py", line 52, in train
+    trainer.train()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\trainer.py", line 1559, in train
+    return inner_training_loop(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\trainer.py", line 1643, in _inner_training_loop
+    self._run_epoch(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\transformers\trainer.py", line 1915, in _run_epoch
+    self.optimizer.step()
+  File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\lr_scheduler.py", line 166, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\accelerate\optimizer.py", line 186, in step
+    self.optimizer.step(closure)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\optimizer.py", line 549, in wrapper
+    out = func(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\optimizer.py", line 79, in _use_grad
+    ret = func(*args, **kwargs)
+  File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\adam.py", line 238, in step
+    has_complex = self._init_group(
+  File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\adam.py", line 182, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+RuntimeError: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.
