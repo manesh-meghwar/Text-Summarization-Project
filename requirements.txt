@@ -6,6 +6,7 @@ transformers[sentencepiece]           # Adds a specific tokenizer tool used by m
 datasets
 sacrebleu                               # A standard metric used to score translation and summarization quality.
 rouge_score                             # The most famous metric for Text Summarization. It checks how many words from the AI summary overlap with the human summary.
+evaluate                                # Loads the ROUGE metric. datasets 5.x no longer provides load_metric.
 py7zr                                   # A tool to extract
 pandas
 nltk                                    # Natural Language Toolkit. Classic tools for text processing (like splitting sentences).

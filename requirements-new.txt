@@ -2,13 +2,13 @@
 transformers
 transformers[sentencepiece]
 datasets
-accelerate                 <-- ADD: Required for Hugging Face Trainer to work with your GPU
+accelerate                                                                  
 sentencepiece
 protobuf
 pyarrow
 
 # PyTorch (GPU Version)
---extra-index-url https://download.pytorch.org/whl/cu121   <-- ADD: Forces pip to get the GPU version
+--extra-index-url https://download.pytorch.org/whl/cu121   
 torch
 torchvision
 torchaudio
@@ -16,6 +16,7 @@ torchaudio
 # Evaluation Metrics
 sacrebleu
 rouge_score
+evaluate
 
 # Data & Utilities
 py7zr
@@ -32,9 +33,9 @@ boto3
 mypy-boto3-s3
 
 # Web API (Updated for compatibility)
-fastapi                    <-- CHANGED: Removed the old ==0.78.0 pin
-uvicorn                    <-- CHANGED: Removed the old ==0.18.3 pin
-Jinja2                     <-- CHANGED: Removed the ==3.1.2 pin to avoid conflicts
+fastapi                    
+uvicorn                    
+Jinja2                     
 
 # Local Package
 -e .

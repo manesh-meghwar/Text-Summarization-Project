@@ -6,6 +6,7 @@ from textSummarizer.entity import DataTransformationConfig
 
 
 
+
 class DataTransformation:
     def __init__(self, config: DataTransformationConfig):
         self.config = config
@@ -27,7 +28,6 @@ class DataTransformation:
             'attention_mask': input_encodings['attention_mask'],
             'labels': target_encodings['input_ids']
         }
-    
 
     def convert(self):
         dataset_samsum = load_from_disk(self.config.data_path)
@@ -35,21 +35,3 @@ class DataTransformation:
         dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
         
         
-
-
-def convert_examples_to_features(self, example_batch):
-    # Tokenize the input dialogues
-    input_encodings = self.tokenizer(example_batch['dialogue'], max_length=1024, truncation=True)
-    
-    # Tokenize the target summaries using text_target (the new way)
-    target_encodings = self.tokenizer(
-        text_target=example_batch['summary'], 
-        max_length=128, 
-        truncation=True
-    )
-    
-    return {
-        'input_ids': input_encodings['input_ids'],
-        'attention_mask': input_encodings['attention_mask'],
-        'labels': target_encodings['input_ids']
-    }
