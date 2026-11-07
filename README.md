@@ -1,155 +1,150 @@
 # Text Summarization
 
-Fine-tune [Pegasus](https://huggingface.co/google/pegasus-cnn_dailymail) on the SAMSum dialogue dataset, score it with ROUGE, and summarize new text in a local web page.
+End-to-end project that fine-tunes **Pegasus** on **SAMSum** dialogue data and serves summaries in a Streamlit web page.
 
-The training pipeline downloads the dataset, checks the files, tokenizes the dialogues, fine-tunes the model, and writes a metrics file. After training, a Streamlit page loads the saved model. You can choose a **short**, **medium**, or **long** summary.
+The pipeline downloads the dataset, validates the splits, tokenizes the text, trains the model, and scores it with ROUGE. After training, `streamlit_app.py` loads the saved weights and summarizes new text. The page has **Short**, **Medium**, and **Long** length settings.
 
-## What you need
+## Project description
 
-- Python 3.10
-- Git
-- An internet connection. The first training run downloads the dataset and the Pegasus checkpoint.
-- An NVIDIA GPU is recommended for training. Pegasus is large. Training on CPU can stop with an out-of-memory error.
-- Conda, or another virtual environment tool
+Abstractive summarization writes a shorter version of the input in new words. This project does that for chats and short English documents.
 
-Run every command below from the project root, the folder that contains `main.py` and `config`.
+1. SAMSum conversations are downloaded and stored under `artifacts/data_ingestion/`.
+2. Dialogues are tokenized with the Pegasus tokenizer.
+3. `google/pegasus-cnn_dailymail` is fine-tuned for one epoch on those dialogues.
+4. The fine-tuned model is saved and scored on the test split.
+5. The Streamlit app loads that saved model and returns a summary.
+
+The web page is the main user interface. FastAPI in `app.py` is optional.
+
+## Model
+
+| Item | Value |
+| --- | --- |
+| Base model | [`google/pegasus-cnn_dailymail`](https://huggingface.co/google/pegasus-cnn_dailymail) |
+| Architecture | Pegasus (`PegasusForConditionalGeneration`), encoder–decoder seq2seq |
+| Pretraining | CNN / DailyMail news summarization |
+| Fine-tuning data | SAMSum (train / validation / test dialogues) |
+| Saved model | `artifacts/model_trainer/pegasus-samsum-model` |
+| Saved tokenizer | `artifacts/model_trainer/tokenizer` |
+| Generation | beam search, `num_beams=8` |
+| Metrics | ROUGE-1, ROUGE-2, ROUGE-L, ROUGE-Lsum in `artifacts/model_evaluation/metrics.csv` |
+
+Pegasus is a Transformer built for abstractive summarization. The CNN / DailyMail checkpoint already summarizes articles. Fine-tuning on SAMSum adapts it to chat-style text (`Name: message`).
+
+The Streamlit app calls `model.generate`. Input is truncated at 1024 tokens. Length on the page maps to:
+
+| Setting | Result | Token range | Length penalty |
+| --- | --- | --- | --- |
+| Short | A few sentences | 8–40 | 0.5 |
+| Medium | Default recap | 20–80 | 0.8 |
+| Long | More detail | 40–128 | 1.2 |
+
+These knobs change generation length only. They do not retrain the model. SAMSum targets are short, so **Long** is still a paragraph.
+
+## Repository layout
+
+```text
+Text-Summarization-Project/
+├── main.py                          # runs the five training stages
+├── streamlit_app.py                 # web UI for prediction
+├── app.py                           # optional FastAPI /predict and /train
+├── params.yaml                      # recorded training hyperparameters
+├── setup.py                         # installs the textSummarizer package
+├── requirements.txt                 # Python dependencies
+├── template.py                      # original project scaffolding
+├── config/
+│   └── config.yaml                  # paths, dataset URL, model name
+├── .streamlit/
+│   └── config.toml                  # Streamlit theme and telemetry off
+├── research/                        # notebooks for each stage
+├── artifacts/                       # data, tokenizer, fine-tuned model
+│   ├── data_ingestion/
+│   ├── data_validation/
+│   ├── data_transformation/
+│   ├── model_trainer/
+│   │   ├── pegasus-samsum-model/
+│   │   └── tokenizer/
+│   └── model_evaluation/
+└── src/textSummarizer/
+    ├── config/configuration.py      # reads config.yaml and params.yaml
+    ├── constants/
+    ├── entity/                      # config dataclasses
+    ├── logging/
+    ├── utils/
+    ├── conponents/                  # ingestion, validation, transform, train, evaluate
+    └── pipeline/                    # stage runners and prediction.py
+```
+
+`config/config.yaml` points training at `google/pegasus-cnn_dailymail` and writes the fine-tuned files under `artifacts/model_trainer/`.
 
 ## Setup
 
-Clone the repository and enter it:
+Run commands from the project root (the folder that contains `main.py`).
 
 ```bash
 git clone https://github.com/manesh-meghwar/Text-Summarization-Project.git
 cd Text-Summarization-Project
-```
 
-Create and activate an environment:
-
-```bash
 conda create -n summary python=3.10 -y
 conda activate summary
-```
-
-Install the project libraries. Use `requirements-new.txt` on a CUDA GPU machine. Use `requirements.txt` on CPU-only Windows.
-
-```bash
-pip install -r requirements-new.txt truststore streamlit
-```
-
-CPU-only install:
-
-```bash
 pip install -r requirements.txt truststore streamlit accelerate
-pip install "transformers<5" sentencepiece
 ```
 
-`truststore` helps `main.py` download data on networks that fail SSL checks. `streamlit` runs the web page. `accelerate` is required by the Hugging Face trainer. Transformers 5 removed the old summarization pipeline, so local inference is pinned below version 5 if you need that API. The Streamlit app loads Pegasus with `generate` and works on both 4.x and 5.x.
-
-If Hugging Face is blocked, prefix training with the China mirror:
+If Hugging Face is blocked during training:
 
 ```bash
 HF_ENDPOINT=https://hf-mirror.com python main.py
 ```
 
-## Train and evaluate
+## Train
 
 ```bash
 python main.py
 ```
 
-`main.py` runs five stages in order:
-
-| Stage | What it does | Output |
+| Stage | Script | Output |
 | --- | --- | --- |
-| 1. Data ingestion | Downloads and unzips the SAMSum files | `artifacts/data_ingestion/` |
-| 2. Data validation | Checks that `train`, `test`, and `validation` exist | `artifacts/data_validation/status.txt` |
-| 3. Data transformation | Tokenizes dialogues and summaries | `artifacts/data_transformation/samsum_dataset/` |
-| 4. Model training | Fine-tunes Pegasus and saves the model | `artifacts/model_trainer/pegasus-samsum-model/` and `artifacts/model_trainer/tokenizer/` |
-| 5. Evaluation | Scores the full test split with ROUGE | `artifacts/model_evaluation/metrics.csv` |
+| Data ingestion | `src/textSummarizer/conponents/data_ingestion.py` | `artifacts/data_ingestion/` |
+| Data validation | `src/textSummarizer/conponents/data_validation.py` | `artifacts/data_validation/status.txt` |
+| Data transformation | `src/textSummarizer/conponents/data_transformation.py` | `artifacts/data_transformation/samsum_dataset/` |
+| Model training | `src/textSummarizer/conponents/model_trainer.py` | `pegasus-samsum-model/` and `tokenizer/` |
+| Model evaluation | `src/textSummarizer/conponents/model_evaluation.py` | `artifacts/model_evaluation/metrics.csv` |
 
-Training uses 1 epoch, batch size 1, and gradient accumulation of 16. Those values are set in `src/textSummarizer/conponents/model_trainer.py` and match `params.yaml`. Logs are appended to `logs/running_logs.log`.
+Training uses 1 epoch, batch size 1, and gradient accumulation 16. A GPU is recommended. Logs go to `logs/running_logs.log`.
 
-Stage 5 generates a summary for every test dialogue with beam search, then writes `rouge1`, `rouge2`, `rougeL`, and `rougeLsum`. On a CPU this stage is slow. It runs only after stage 4 has saved the model folders.
+## Web app
 
-## Run the website
-
-Start the page after the two model folders exist:
+After the model folders exist:
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Open the URL printed in the terminal, usually `http://localhost:8501`.
+Open `http://localhost:8501`.
 
-The page loads:
+1. Paste a dialogue or paragraph, or load the sample.
+2. Choose **Short**, **Medium**, or **Long**.
+3. Click **Summarize**.
+
+The app reads only:
 
 - `artifacts/model_trainer/pegasus-samsum-model`
 - `artifacts/model_trainer/tokenizer`
 
-### Page controls
+Those two folders can be copied from a GPU machine onto a local PC. Place them in the same paths next to `streamlit_app.py`. The rest of `artifacts` is not required for prediction.
 
-1. Paste a dialogue or paragraph, or click **Load sample dialogue**.
-2. Choose **Short**, **Medium**, or **Long**.
-3. Click **Summarize**.
-
-| Setting | What you get | Length range |
-| --- | --- | --- |
-| Short | A few sentences | 8–40 tokens |
-| Medium | Default recap | 20–80 tokens |
-| Long | More detail | 40–128 tokens |
-
-The model was trained on SAMSum chats (`Name: message`). Any English text can be pasted. Dialogues summarize best. Input longer than 1024 tokens is truncated. The first load is slow. Later clicks reuse the model in memory.
-
-### Copy the model to another computer
-
-Training can finish on a GPU server. Copy these two folders onto the local machine, next to `streamlit_app.py`, then run Streamlit in a matching environment. You do not need the rest of `artifacts` for prediction.
+The first load is slow. Later clicks reuse the model in memory. Dialogues in SAMSum format work best; any English text can be pasted.
 
 ## Optional API
-
-`app.py` exposes the same model through FastAPI on port 8080:
 
 ```bash
 python app.py
 ```
 
-Open `http://localhost:8080/docs`.
+`http://localhost:8080/docs`
 
-- `POST /predict?text=Your dialogue here` returns the summary.
-- `GET /train` starts `python main.py` from the API process.
-
-The root URL redirects to the API docs. Use the Streamlit page for everyday summarization.
-
-## Project layout
-
-```text
-.
-├── main.py                         # runs all five stages
-├── app.py                          # FastAPI predict and train routes
-├── streamlit_app.py                # browser page, with length controls
-├── params.yaml                     # training numbers recorded for the config
-├── config/config.yaml              # paths, dataset URL, and model name
-├── requirements.txt                # CPU-friendly install
-├── requirements-new.txt            # CUDA 12.1 PyTorch install
-└── src/textSummarizer
-    ├── conponents                  # ingestion, validation, transform, train, evaluate
-    ├── pipeline                    # one runner per stage, plus prediction
-    └── config/configuration.py     # reads config.yaml and params.yaml
-```
-
-## Configuration
-
-`config/config.yaml` sets the dataset URL and the checkpoint name `google/pegasus-cnn_dailymail`. The fine-tuned model is written under `artifacts/model_trainer/`.
-
-`params.yaml` lists the training arguments. The trainer reads its live arguments from `model_trainer.py`, which currently uses the same numbers: 1 epoch, warmup 500, batch size 1, weight decay 0.01, eval every 500 steps, and gradient accumulation 16.
-
-## If something fails
-
-- **`No such file or directory` for the model or tokenizer.** Stage 4 did not finish, or the two folders were not copied next to `streamlit_app.py`.
-- **`The task summarization has been removed`.** That message comes from Transformers 5. This Streamlit app does not use that pipeline. Restart the page after pulling the latest `streamlit_app.py`.
-- **`DefaultCPUAllocator: not enough memory`.** The machine does not have enough free RAM for Pegasus. Train on a GPU machine.
-- **Streamlit hangs on an email prompt or `data.streamlit.io`.** Press Enter with a blank email. Usage stats are already turned off in `.streamlit/config.toml`.
-- **Hugging Face download warnings.** On a blocked network, set `HF_ENDPOINT=https://hf-mirror.com` before `python main.py`.
-- **Commands fail to find `config/config.yaml`.** Start a new terminal, `cd` into the project root, and run the command there.
+- `POST /predict?text=...` returns a summary through `src/textSummarizer/pipeline/prediction.py`
+- `GET /train` runs `python main.py`
 
 ## Author
 
