@@ -2,14 +2,14 @@
 
 Fine-tune [Pegasus](https://huggingface.co/google/pegasus-cnn_dailymail) on the SAMSum dialogue dataset, score it with ROUGE, and summarize new text in a local web page.
 
-The training pipeline downloads the dataset, checks the files, tokenizes the dialogues, fine-tunes the model, and writes a metrics file. After training, a Streamlit page loads the saved model and returns a short summary.
+The training pipeline downloads the dataset, checks the files, tokenizes the dialogues, fine-tunes the model, and writes a metrics file. After training, a Streamlit page loads the saved model. You can choose a **short**, **medium**, or **long** summary.
 
 ## What you need
 
 - Python 3.10
 - Git
-- An internet connection. The first run downloads the dataset and the Pegasus checkpoint from Hugging Face.
-- A NVIDIA GPU is recommended. Pegasus is large. Training on CPU can stop with an out-of-memory error.
+- An internet connection. The first training run downloads the dataset and the Pegasus checkpoint.
+- An NVIDIA GPU is recommended for training. Pegasus is large. Training on CPU can stop with an out-of-memory error.
 - Conda, or another virtual environment tool
 
 Run every command below from the project root, the folder that contains `main.py` and `config`.
@@ -30,14 +30,26 @@ conda create -n summary python=3.10 -y
 conda activate summary
 ```
 
-Install the project and its libraries. The last line of `requirements.txt` installs this repository in editable mode, so the `textSummarizer` package can be imported.
+Install the project libraries. Use `requirements-new.txt` on a CUDA GPU machine. Use `requirements.txt` on CPU-only Windows.
 
 ```bash
-pip install -r requirements.txt
-pip install truststore streamlit accelerate
+pip install -r requirements-new.txt truststore streamlit
 ```
 
-`truststore` is imported by `main.py` so dataset downloads can complete on networks that fail SSL certificate checks. `streamlit` runs the summary page. `accelerate` is required by the Hugging Face trainer.
+CPU-only install:
+
+```bash
+pip install -r requirements.txt truststore streamlit accelerate
+pip install "transformers<5" sentencepiece
+```
+
+`truststore` helps `main.py` download data on networks that fail SSL checks. `streamlit` runs the web page. `accelerate` is required by the Hugging Face trainer. Transformers 5 removed the old summarization pipeline, so local inference is pinned below version 5 if you need that API. The Streamlit app loads Pegasus with `generate` and works on both 4.x and 5.x.
+
+If Hugging Face is blocked, prefix training with the China mirror:
+
+```bash
+HF_ENDPOINT=https://hf-mirror.com python main.py
+```
 
 ## Train and evaluate
 
@@ -59,22 +71,38 @@ Training uses 1 epoch, batch size 1, and gradient accumulation of 16. Those valu
 
 Stage 5 generates a summary for every test dialogue with beam search, then writes `rouge1`, `rouge2`, `rougeL`, and `rougeLsum`. On a CPU this stage is slow. It runs only after stage 4 has saved the model folders.
 
-## Summarize text in the browser
+## Run the website
 
-Start the page after training has created the two model folders:
+Start the page after the two model folders exist:
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Open the URL printed in the terminal, usually `http://localhost:8501`. Paste a dialogue or paragraph, then click **Summarize**.
+Open the URL printed in the terminal, usually `http://localhost:8501`.
 
 The page loads:
 
 - `artifacts/model_trainer/pegasus-samsum-model`
 - `artifacts/model_trainer/tokenizer`
 
-The first summary is slow because the model is loaded into memory. Later summaries in the same session reuse that load.
+### Page controls
+
+1. Paste a dialogue or paragraph, or click **Load sample dialogue**.
+2. Choose **Short**, **Medium**, or **Long**.
+3. Click **Summarize**.
+
+| Setting | What you get | Length range |
+| --- | --- | --- |
+| Short | A few sentences | 8–40 tokens |
+| Medium | Default recap | 20–80 tokens |
+| Long | More detail | 40–128 tokens |
+
+The model was trained on SAMSum chats (`Name: message`). Any English text can be pasted. Dialogues summarize best. Input longer than 1024 tokens is truncated. The first load is slow. Later clicks reuse the model in memory.
+
+### Copy the model to another computer
+
+Training can finish on a GPU server. Copy these two folders onto the local machine, next to `streamlit_app.py`, then run Streamlit in a matching environment. You do not need the rest of `artifacts` for prediction.
 
 ## Optional API
 
@@ -89,7 +117,7 @@ Open `http://localhost:8080/docs`.
 - `POST /predict?text=Your dialogue here` returns the summary.
 - `GET /train` starts `python main.py` from the API process.
 
-The root URL redirects to the API docs. The Streamlit page is the text box for everyday use.
+The root URL redirects to the API docs. Use the Streamlit page for everyday summarization.
 
 ## Project layout
 
@@ -97,10 +125,11 @@ The root URL redirects to the API docs. The Streamlit page is the text box for e
 .
 ├── main.py                         # runs all five stages
 ├── app.py                          # FastAPI predict and train routes
-├── streamlit_app.py                # browser page for summarization
+├── streamlit_app.py                # browser page, with length controls
 ├── params.yaml                     # training numbers recorded for the config
 ├── config/config.yaml              # paths, dataset URL, and model name
-├── requirements.txt
+├── requirements.txt                # CPU-friendly install
+├── requirements-new.txt            # CUDA 12.1 PyTorch install
 └── src/textSummarizer
     ├── conponents                  # ingestion, validation, transform, train, evaluate
     ├── pipeline                    # one runner per stage, plus prediction
@@ -115,10 +144,11 @@ The root URL redirects to the API docs. The Streamlit page is the text box for e
 
 ## If something fails
 
-- **`No such file or directory` for the model or tokenizer.** Stage 4 did not finish. Run `python main.py` and wait until both folders exist under `artifacts/model_trainer/`.
-- **`DefaultCPUAllocator: not enough memory`.** The machine does not have enough free RAM for Pegasus. Use a GPU machine, or close other programs and run again. A failed run does not leave a usable model.
-- **`ImportError` for `truststore`, `streamlit`, or `accelerate`.** Install the three packages in the setup section.
-- **Hugging Face download warnings.** The checkpoint still downloads without an account. A token raises the rate limit: set `HF_TOKEN` in the environment before `python main.py`.
+- **`No such file or directory` for the model or tokenizer.** Stage 4 did not finish, or the two folders were not copied next to `streamlit_app.py`.
+- **`The task summarization has been removed`.** That message comes from Transformers 5. This Streamlit app does not use that pipeline. Restart the page after pulling the latest `streamlit_app.py`.
+- **`DefaultCPUAllocator: not enough memory`.** The machine does not have enough free RAM for Pegasus. Train on a GPU machine.
+- **Streamlit hangs on an email prompt or `data.streamlit.io`.** Press Enter with a blank email. Usage stats are already turned off in `.streamlit/config.toml`.
+- **Hugging Face download warnings.** On a blocked network, set `HF_ENDPOINT=https://hf-mirror.com` before `python main.py`.
 - **Commands fail to find `config/config.yaml`.** Start a new terminal, `cd` into the project root, and run the command there.
 
 ## Author

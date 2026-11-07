@@ -1157,3 +1157,92 @@ Traceback (most recent call last):
   File "C:\dlcv\envs\textS_310\lib\site-packages\torch\optim\adam.py", line 182, in _init_group
     state["exp_avg_sq"] = torch.zeros_like(
 RuntimeError: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.
+[2026-11-07 13:00:03,144: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-07 13:00:03,173: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-07 13:00:03,186: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-07 13:00:03,187: INFO: common: created directory at: artifacts]
+[2026-11-07 13:00:03,188: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-07 13:00:09,626: ERROR: main: <urlopen error retrieval incomplete: got only 1146880 out of 7903594 bytes>]
+Traceback (most recent call last):
+  File "D:\ML\Text-Summarization-Project\main.py", line 16, in <module>
+    data_ingestion.main()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "D:\ML\Text-Summarization-Project\src\textSummarizer\conponents\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\dlcv\envs\textS_310\lib\urllib\request.py", line 280, in urlretrieve
+    raise ContentTooShortError(
+urllib.error.ContentTooShortError: <urlopen error retrieval incomplete: got only 1146880 out of 7903594 bytes>
+[2026-11-07 13:09:37,455: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-11-07 13:09:37,469: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-07 13:09:37,472: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-07 13:09:37,472: INFO: common: created directory at: artifacts]
+[2026-11-07 13:09:37,473: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-11-07 13:09:50,737: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 4B88:F42E9:64E94:7C97B:6AEEB058
+x-github-edge-region: uksouth
+Accept-Ranges: bytes
+Date: Sat, 07 Nov 2026 05:09:43 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsat1880090-SIN
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1794028183.893418,VS0,VE281
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7e84b1b7d27aa2c1c1428b2545dee5c4dc1bff9d
+Expires: Sat, 07 Nov 2026 05:14:43 GMT
+Source-Age: 0
+
+]
+[2026-11-07 13:09:50,919: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-11-07 13:09:50,920: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-11-07 13:09:50,924: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-07 13:09:50,927: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-07 13:09:50,927: INFO: common: created directory at: artifacts]
+[2026-11-07 13:09:50,928: INFO: common: created directory at: artifacts/data_validation]
+[2026-11-07 13:09:50,929: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-11-07 13:09:50,930: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-11-07 13:09:50,934: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-07 13:09:50,936: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-07 13:09:50,937: INFO: common: created directory at: artifacts]
+[2026-11-07 13:09:50,937: INFO: common: created directory at: artifacts/data_transformation]
+[2026-11-07 13:09:58,518: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:04,239: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-07 13:10:06,707: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:08,640: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-07 13:10:09,030: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:09,912: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-07 13:10:20,844: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-11-07 13:10:20,846: INFO: main: *******************]
+[2026-11-07 13:10:20,847: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2026-11-07 13:10:20,852: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-11-07 13:10:20,854: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-11-07 13:10:20,856: INFO: common: created directory at: artifacts]
+[2026-11-07 13:10:20,856: INFO: common: created directory at: artifacts/model_trainer]
+[2026-11-07 13:10:29,589: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:30,477: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-07 13:10:30,795: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:31,578: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"]
+[2026-11-07 13:10:31,873: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:32,237: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"]
+[2026-11-07 13:10:32,843: INFO: _client: HTTP Request: GET https://hf-mirror.com/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 308 Permanent Redirect"]
+[2026-11-07 13:10:33,677: INFO: _client: HTTP Request: GET https://huggingface.co/api/models/google/pegasus-cnn_dailymail "HTTP/1.1 200 OK"]
+[2026-11-07 13:10:36,856: INFO: _client: HTTP Request: HEAD https://hf-mirror.com/google/pegasus-cnn_dailymail/resolve/main/model.safetensors "HTTP/1.1 308 Permanent Redirect"]

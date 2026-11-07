@@ -1,25 +1,41 @@
-
-# this file create a necessary libraries for our model
-
+# Core AI & NLP
 transformers
-transformers[sentencepiece]           # Adds a specific tokenizer tool used by models like T5 to break text into smaller chunks.
+transformers[sentencepiece]
 datasets
-sacrebleu                               # A standard metric used to score translation and summarization quality.
-rouge_score                             # The most famous metric for Text Summarization. It checks how many words from the AI summary overlap with the human summary.
-evaluate                                # Loads the ROUGE metric. datasets 5.x no longer provides load_metric.
-py7zr                                   # A tool to extract
-pandas
-nltk                                    # Natural Language Toolkit. Classic tools for text processing (like splitting sentences).
-tqdm
-PyYAML                                  # Reads .yaml configuration files
-matplotlib
+accelerate                                                                  
+sentencepiece
+protobuf
+pyarrow
+
+# PyTorch (GPU Version)
+--extra-index-url https://download.pytorch.org/whl/cu121   
 torch
-notebook
-boto3
-mypy-boto3-s3
+torchvision
+torchaudio
+
+# Evaluation Metrics
+sacrebleu
+rouge_score
+evaluate
+
+# Data & Utilities
+py7zr
+pandas
+nltk
+tqdm
+PyYAML
+matplotlib
 python-box==6.0.2
 ensure==1.0.2
-fastapi==0.78.0
-uvicorn==0.18.3                         #  The web server that actually runs your FastAPI app.
-Jinja2==3.1.2                           #  A template engine to create the HTML webpages for your frontend.
--e .                                    #  This tells pip to install your local project (using your setup.py) in "editable" mode.
+
+# Backend / Cloud
+boto3
+mypy-boto3-s3
+
+# Web API (Updated for compatibility)
+fastapi                    
+uvicorn                    
+Jinja2                     
+
+# Local Package
+-e .
